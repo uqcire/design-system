@@ -1,0 +1,124 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Krona+One&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html,
+.root {
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Krona One', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
+  line-height: 6.3135rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+  line-height: 4.7355rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+  line-height: 3.5535rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+  line-height: 2.6655rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+  line-height: 1.9995rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr,
+.hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+a,
+b,
+i,
+strong,
+em,
+small,
+code {
+  line-height: 0;
+}
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* sub Headline */
+.sub {
+  font-weight: 400;
+}
+
+/* code */
+.code {
+  @apply font-fira font-normal italic;
+}
