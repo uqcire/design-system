@@ -174,7 +174,16 @@ import { NButton, NDivider, NTable, NTag } from 'naive-ui'
 
       <!-- typography tokens -->
       <div id="typography-tokens">
-        <p>Typography Tokens</p>
+        <n-tag
+          size="large"
+          :color="{
+            color: '#f2f7d5',
+            textColor: '#092147',
+            borderColor: '#f2f7d5',
+          }"
+        >
+          TYPOGRAPHY TOKENS
+        </n-tag>
         <h1>Typography Tokens</h1>
         <h3 class="sub">Design tokens for FGL's typography system, available as CSS custom properties.</h3>
         <n-table :single-line="false">
