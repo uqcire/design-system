@@ -3,21 +3,21 @@
 
 import PageBlock from '@/components/Layout/PageBlock.vue'
 import { NButton } from 'naive-ui'
+import { ref } from 'vue'
+
+const links = ref([
+  { id: '1', link: 'color' },
+  { id: '2', link: 'typography' },
+  { id: '3', link: 'spacing' },
+  { id: '4', link: 'breakpoints' },
+])
 </script>
 
 <template>
   <div class="container pt-8">
     <div class="grid grid-cols-8 gap-4">
-      <n-button type="primary">
-        <router-link to="/color">Color</router-link>
-      </n-button>
-
-      <n-button type="success">
-        <router-link to="/typography">Typography</router-link>
-      </n-button>
-
-      <n-button type="warning">
-        <router-link to="/spacing">Spacing</router-link>
+      <n-button v-for="val in links" :key="val.id" type="primary">
+        <router-link :to="'/' + val.link" class="uppercase">{{ val.link }}</router-link>
       </n-button>
     </div>
   </div>
@@ -65,6 +65,6 @@ import { NButton } from 'naive-ui'
 
 <style lang="scss">
 .span-color {
-  color: #db3e4d;
+  @apply text-fgl-valencia;
 }
 </style>

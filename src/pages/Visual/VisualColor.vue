@@ -264,7 +264,7 @@ const status = ref([
 <template>
   <div class="container pt-8">
     <n-button type="primary">
-      <router-link to="/">Home</router-link>
+      <router-link class="uppercase" to="/">Home</router-link>
     </n-button>
   </div>
 
