@@ -29,6 +29,12 @@ const routes = [
     component: () => import('@p/Visual/VisualSpacing.vue'),
     meta: { title: 'Spacing | FGL - Design System' },
   },
+  {
+    path: '/breakpoints',
+    name: 'Breakpoints',
+    component: () => import('@p/Visual/VisualBreakpoints.vue'),
+    meta: { title: 'Breakpoints | FGL - Design System' },
+  },
 ]
 
 const router = createRouter({

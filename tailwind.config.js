@@ -7,8 +7,13 @@ module.exports = {
     },
     fontFamily: {
       fira: ['Fira Code'],
-      mada: ['Mada'],
-      chivo: ['Chivo'],
+    },
+    screens: {
+      sm: { min: '375px', max: '767px' },
+      md: { min: '768px', max: '1023px' },
+      lg: { min: '1024px', max: '1339px' },
+      xl: { min: '1440px', max: '1919px' },
+      '2xl': { min: '1920px' },
     },
     spacing: {
       1: '0.5rem',
