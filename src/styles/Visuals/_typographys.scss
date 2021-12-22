@@ -11,7 +11,6 @@ html,
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  line-height: 1.5rem;
   font-size: 1rem;
   margin: auto;
 }
@@ -82,13 +81,6 @@ table,
 blockquote {
   margin-top: 0rem;
   margin-bottom: 1.5rem;
-}
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
 }
 
 /* Let's make sure all's aligned */

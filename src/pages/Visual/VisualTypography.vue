@@ -3,6 +3,137 @@
 
 import PageBlock from '@c/Layout/PageBlock.vue'
 import { NButton, NDivider, NTable, NTag } from 'naive-ui'
+import { ref } from 'vue'
+
+const bodyScales = ref([
+  { id: 1, title: 'Large', class: 'text-xl' },
+  { id: 2, title: 'Base', class: 'text-base' },
+  { id: 3, title: 'Small', class: 'text-sm' },
+  { id: 4, title: 'Caption', class: 'text-caption' },
+])
+
+const typoTokens = ref([
+  {
+    id: 1 - 1,
+    title: 'headline',
+    code: 'h1, h2, h3, h4, h5, h6',
+    valueA: 'font-family: "Work Sans", sans-serif',
+    valueB: 'font-weight: 700',
+    valueC: '',
+    valueD: '',
+    valueE: '',
+  },
+  {
+    id: 1 - 2,
+    title: 'h1',
+    code: 'h1',
+    valueA: 'margin-top: 0',
+    valueB: 'font-size: 4.209rem',
+    valueC: 'line-height: 6.3135rem',
+    valueD: 'margin-top: 1.5rem',
+    valueE: 'margin-bottom: 2rem',
+  },
+  {
+    id: 1 - 3,
+    title: 'h2',
+    code: 'h2',
+    valueA: 'font-size: 3.157rem',
+    valueB: 'line-height: 4.7355rem',
+    valueC: 'margin-top: 1.5rem',
+    valueD: 'margin-bottom: 1.5rem',
+    valueE: '',
+  },
+  {
+    id: 1 - 4,
+    title: 'h3',
+    code: 'h3',
+    valueA: 'font-size: 2.369rem',
+    valueB: 'line-height: 3.5535rem',
+    valueC: 'margin-top: 1.5rem',
+    valueD: 'margin-bottom: 1.0rem',
+    valueE: '',
+  },
+  {
+    id: 1 - 5,
+    title: 'h4',
+    code: 'h4',
+    valueA: 'font-size: 1.777rem',
+    valueB: 'line-height: 2.6655rem',
+    valueC: 'margin-top: 1.5rem',
+    valueD: 'margin-bottom: 1.0rem',
+    valueE: '',
+  },
+  {
+    id: 1 - 6,
+    title: 'h5',
+    code: 'h5',
+    valueA: 'font-size: 1.333rem',
+    valueB: 'line-height: 1.9995rem',
+    valueC: 'margin-top: 1.5rem',
+    valueD: 'margin-bottom: 1.0rem',
+    valueE: '',
+  },
+  {
+    id: 1 - 7,
+    title: 'h6',
+    code: 'h6',
+    valueA: 'font-size: 1.25rem',
+    valueB: 'line-height: 1.875rem',
+    valueC: 'margin-top: 1.5rem',
+    valueD: 'margin-bottom: 1.0rem',
+    valueE: '',
+  },
+  {
+    id: 2 - 1,
+    title: 'subheadline',
+    code: '.sub',
+    valueA: 'font-family: "Raleway", sans-serif',
+    valueB: 'font-weight: 500',
+    valueC: '',
+    valueD: '',
+    valueE: '',
+  },
+  {
+    id: 3 - 1,
+    title: 'html',
+    code: 'html, .root',
+    valueA: 'font-size: 16px',
+    valueB: 'line-height: 1.5rem',
+    valueC: '',
+    valueD: '',
+    valueE: '',
+  },
+  {
+    id: 3 - 2,
+    title: 'body',
+    code: 'body',
+    valueA: 'font-family: "Lato", sans-serif',
+    valueB: 'font-weight: 500',
+    valueC: 'font-size: 1rem',
+    valueD: 'margin: auto',
+    valueE: '',
+  },
+  {
+    id: 3 - 2,
+    title: 'p, ul, ol, pre, table, blockquote',
+    code: 'p, ul, ol, pre, table, blockquote',
+    valueA: 'margin-top: 0rem',
+    valueB: 'margin-bottom: 1.5rem',
+    valueC: '',
+    valueD: '',
+    valueE: '',
+  },
+  {
+    id: 4 - 1,
+    title: 'code',
+    code: '.code',
+    valueA: 'font-family: "Fira Code", monospace',
+    valueB: 'font-weight: 400',
+    valueC: 'font-style: italic',
+    valueD: '',
+    valueE: '',
+  },
+])
 </script>
 
 <template>
@@ -83,10 +214,9 @@ import { NButton, NDivider, NTable, NTag } from 'naive-ui'
       <div id="#body-scale">
         <h3>Body Scale</h3>
         <n-divider />
-        <p class="text-xl">Large: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda?</p>
-        <p class="text-base">Base: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, animi.</p>
-        <p class="text-sm">Small: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, animi.</p>
-        <p class="text-caption">Caption: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, aliquid.</p>
+        <p v-for="val in bodyScales" :key="val.id" :class="val.class">
+          {{ val.title }}: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda?
+        </p>
       </div>
       <n-divider />
 
@@ -190,130 +320,25 @@ import { NButton, NDivider, NTable, NTag } from 'naive-ui'
           <!-- headline scacles -->
           <thead>
             <tr>
-              <th>Headline scales</th>
+              <th>Scales</th>
               <th>CSS custom property</th>
               <th>Value</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>preset</td>
-              <td></td>
+            <tr v-for="val in typoTokens" :key="val.id">
+              <td>{{ val.title }}</td>
+              <td class="code">{{ val.code }}</td>
               <td>
-                font-family: 'Chivo', sans-serif
+                {{ val.valueA }}
                 <br />
-                font-weight: 900
+                {{ val.valueB }}
                 <br />
-                margin-bottom: 1rem
-              </td>
-            </tr>
-            <tr>
-              <td>h1</td>
-              <td class="code">h1</td>
-              <td>font-size: 4.209rem</td>
-            </tr>
-            <tr>
-              <td>h2</td>
-              <td class="code">h2</td>
-              <td>font-size: 3.157rem</td>
-            </tr>
-            <tr>
-              <td>h3</td>
-              <td class="code">h3</td>
-              <td>font-size: 2.369rem</td>
-            </tr>
-            <tr>
-              <td>h4</td>
-              <td class="code">h4</td>
-              <td>font-size: 1.777rem</td>
-            </tr>
-            <tr>
-              <td>h5</td>
-              <td class="code">h5</td>
-              <td>font-size: 1.333rem</td>
-            </tr>
-            <tr>
-              <td>h6</td>
-              <td class="code">h6</td>
-              <td>font-size: 1.25rem</td>
-            </tr>
-          </tbody>
-
-          <!-- subheadline scales -->
-          <thead>
-            <tr>
-              <th>Subheadline scales</th>
-              <th>CSS custom property</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>h3, h4, h5</td>
-              <td class="code">sub</td>
-              <td>font-weight: 400</td>
-            </tr>
-          </tbody>
-
-          <!-- body scales -->
-          <thead>
-            <tr>
-              <th>Body scales</th>
-              <th>CSS custom property</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>preset</td>
-              <td></td>
-              <td>
-                font-family: 'Mada', sans-serif
+                {{ val.valueC }}
                 <br />
-                font-weight: 500
+                {{ val.valueD }}
                 <br />
-                font-size: 16px
-                <br />
-                margin-bottom: 1rem
-              </td>
-            </tr>
-            <tr>
-              <td>large</td>
-              <td class="code">text-lg</td>
-              <td>font-size: 1.125rem</td>
-            </tr>
-            <tr>
-              <td>small</td>
-              <td class="code">text-sm</td>
-              <td>font-size: 0.875rem</td>
-            </tr>
-            <tr>
-              <td>caption</td>
-              <td class="code">text-caption</td>
-              <td>font-size: 0.64rem</td>
-            </tr>
-          </tbody>
-
-          <!-- code -->
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>CSS custom property</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>code</td>
-              <td class="code">code</td>
-              <td>
-                font-family: 'Fira Code', monospace
-                <br />
-                font-weight: 400
-                <br />
-                margin-bottom: 1rem
-                <br />
-                italic
+                {{ val.valueE }}
               </td>
             </tr>
           </tbody>
