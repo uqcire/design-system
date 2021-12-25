@@ -6,18 +6,31 @@ import { NButton } from 'naive-ui'
 import { ref } from 'vue'
 
 const links = ref([
-  { id: '1', link: 'color' },
-  { id: '2', link: 'typography' },
-  { id: '3', link: 'spacing' },
-  { id: '4', link: 'breakpoints' },
+  {
+    id: '1',
+    visual: [
+      { id: '1', link: 'visual-color', title: 'color' },
+      { id: '2', link: 'visual-typography', title: 'typography' },
+      { id: '3', link: 'visual-spacing', title: 'spacing' },
+      { id: '4', link: 'visual-breakpoints', title: 'breakpoints' },
+    ],
+  },
+  {
+    id: '2',
+    element: [{ id: '1', link: 'element-articles', title: 'articles' }],
+  },
 ])
 </script>
 
 <template>
   <div class="container pt-8">
-    <div class="grid grid-cols-8 gap-4">
-      <n-button v-for="val in links" :key="val.id" type="primary">
-        <router-link :to="'/' + val.link" class="uppercase">{{ val.link }}</router-link>
+    <div v-for="val in links" :key="val.id" class="grid grid-cols-8 gap-4">
+      <n-button v-for="item in val.visual" :key="item.id" type="primary" class="mb-2">
+        <router-link :to="'/' + item.link" class="uppercase">{{ item.title }}</router-link>
+      </n-button>
+
+      <n-button v-for="item in val.element" :key="item.id" type="success" class="mb-2">
+        <router-link :to="'/' + item.link" class="uppercase">{{ item.title }}</router-link>
       </n-button>
     </div>
   </div>

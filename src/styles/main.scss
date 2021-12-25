@@ -1,14 +1,15 @@
-// reset
-@import 'reset.scss';
-
 // tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// typographys
-@import 'Visuals/typographys';
-
-// colors
+// reset
+@import 'reset';
 
 // base & layout
+@import 'elements';
+
+// typographys
+@import 'typographys';
+
+// colors
