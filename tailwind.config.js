@@ -7,6 +7,9 @@ module.exports = {
     },
     fontFamily: {
       fira: ['Fira Code'],
+      work: ['Work Sans'],
+      lato: ['Lato'],
+      raleway: ['Raleway'],
     },
     screens: {
       sm: { min: '375px', max: '767px' },
@@ -16,6 +19,7 @@ module.exports = {
       '2xl': { min: '1920px' },
     },
     spacing: {
+      0: '0rem',
       1: '0.5rem',
       2: '1rem',
       3: '1.5rem',
