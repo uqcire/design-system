@@ -3,7 +3,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '12rem',
     },
     fontFamily: {
       fira: ['Fira Code'],
