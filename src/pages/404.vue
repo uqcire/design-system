@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-'404'
+'404';
 
-import PageBlock from '@c/Layout/PageBlock.vue'
+import PageBlock from '@/components/Layout/PageBlock.vue';
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-'Articles'
+'Articles';
 
-import PageBlock from '@c/Layout/PageBlock.vue'
-import { NButton, NCollapse, NCollapseItem, NDivider, NTag } from 'naive-ui'
-import { ref } from 'vue'
+import PageBlock from '@c/Layout/PageBlock.vue';
+import { NButton, NCollapse, NCollapseItem, NDivider, NTag } from 'naive-ui';
+import { ref } from 'vue';
 
 const list = ref([
   { id: 1, name: 'p' },
@@ -22,7 +22,7 @@ const list = ref([
   { id: 14, name: 'kbd' },
   { id: 15, name: 'pre' },
   { id: 16, name: 'hr' },
-])
+]);
 </script>
 
 <template>
@@ -42,8 +42,8 @@ const list = ref([
     <div class="col-span-8">
       <h4>Basic Article</h4>
       <p class="text-xl">
-        An Article element can be used for any free-form content areas where a WYSIWYG editor is enabled. Basic HTML
-        elements are styled within the Article element.
+        An Article element can be used for any free-form content areas where a WYSIWYG editor is
+        enabled. Basic HTML elements are styled within the Article element.
       </p>
       <h4>Demo</h4>
       <p class="text-xl">The is a list of all supported plain HTML elements:</p>
@@ -59,7 +59,10 @@ const list = ref([
       <p class="text-xl">The following is a kitchen sink of all supported plain HTML elements:</p>
 
       <!-- HEADINGS -->
-      <n-tag size="large" class="uppercase" :color="{ color: '#f2f7d5', textColor: '#092147', borderColor: '#f2f7d5' }"
+      <n-tag
+        size="large"
+        class="uppercase"
+        :color="{ color: '#f2f7d5', textColor: '#092147', borderColor: '#f2f7d5' }"
         >Headings</n-tag
       >
       <h1>H1 heading text</h1>
@@ -77,21 +80,21 @@ const list = ref([
         :color="{ color: '#f2f7d5', textColor: '#092147', borderColor: '#f2f7d5' }"
         >text</n-tag
       >
-      <ul>
-        <li class="font-bold mr-2 inline">bold</li>
-        <li class="italic inline mr-2">italic</li>
-        <li class="inline mr-2 text-fgl-info"><a href="#!">linked</a></li>
-        <li class="underline inline mr-2">underline</li>
-        <li class="code inline mr-2">code</li>
-        <li class="inline mr-2">
+      <ul class="columns-9">
+        <li class="font-bold mr-2">bold</li>
+        <li class="italic mr-2">italic</li>
+        <li class="mr-2 fgl-text-link"><a href="#!">linked</a></li>
+        <li class="underline mr-2">underline</li>
+        <li class="code mr-2">code</li>
+        <li class="mr-2">
           <kbd>kbd</kbd>
         </li>
-        <li class="font-caption inline mr-2">small</li>
-        <li class="inline mr-2">
+        <li class="font-caption mr-2">small</li>
+        <li class="mr-2">
           super
           <sup>script</sup>
         </li>
-        <li class="inline mr-2">
+        <li class="mr-2">
           sub
           <sub>script</sub>
         </li>
@@ -155,7 +158,9 @@ const list = ref([
         >pre & code</n-tag
       >
       <pre>
-          <code class="code">pre&nbsp;{<br>&nbsp;&nbsp;padding: .5em 1em; color: black; border-left: 5px solid; background-color: white;<br>}</code>
+          <code class="code">pre&nbsp;{
+            <br>&nbsp;&nbsp;padding: .5em 1em; color: black;
+            border-left: 5px solid; background-color: white;<br>}</code>
       </pre>
       <n-divider />
 

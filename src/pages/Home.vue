@@ -1,28 +1,52 @@
 <script lang="ts" setup>
-'Home'
+'Home';
 
-import PageBlock from '@/components/Layout/PageBlock.vue'
-import { NButton } from 'naive-ui'
-import { ref } from 'vue'
+import PageBlock from '@c/Layout/PageBlock.vue';
+import { NButton } from 'naive-ui';
+import { ref } from 'vue';
 
 const links = ref([
   {
     id: '1',
     visual: [
-      { id: '1', link: 'visual-color', title: 'color' },
-      { id: '2', link: 'visual-typography', title: 'typography' },
-      { id: '3', link: 'visual-spacing', title: 'spacing' },
-      { id: '4', link: 'visual-breakpoints', title: 'breakpoints' },
+      {
+        id: '1',
+        link: 'visual-color',
+        title: 'color',
+      },
+      {
+        id: '2',
+        link: 'visual-typography',
+        title: 'typography',
+      },
+      {
+        id: '3',
+        link: 'visual-spacing',
+        title: 'spacing',
+      },
+      {
+        id: '4',
+        link: 'visual-breakpoints',
+        title: 'breakpoints',
+      },
     ],
   },
   {
     id: '2',
     element: [
-      { id: '1', link: 'element-articles', title: 'articles' },
-      { id: '2', link: 'element-text-link', title: 'text link' },
+      {
+        id: '1',
+        link: 'element-articles',
+        title: 'articles',
+      },
+      {
+        id: '2',
+        link: 'element-text-link',
+        title: 'text link',
+      },
     ],
   },
-])
+]);
 </script>
 
 <template>

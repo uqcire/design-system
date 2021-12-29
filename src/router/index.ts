@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -48,18 +48,24 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@p/Elements/ElementArticle.vue'),
     meta: { title: 'Articles | FGL - Design System' },
   },
-]
+  {
+    path: '/element-text-link',
+    name: 'ElementTextLink',
+    component: () => import('@p/Elements/ElementTextLink.vue'),
+    meta: { title: 'Text Link | FGL - Design System' },
+  },
+];
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
+});
 
 router.beforeEach((to, from, next) => {
   /* 路由发生变化修改页面title */
   if (typeof to.meta.title === 'string') {
-    document.title = to.meta.title
+    document.title = to.meta.title;
   }
-  next()
-})
+  next();
+});
 
-export default router
+export default router;

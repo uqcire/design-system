@@ -1,16 +1,37 @@
 <script lang="ts" setup>
-'Breakpoints'
-import PageBlock from '@c/Layout/PageBlock.vue'
-import { NButton, NScrollbar, NTabPane, NTabs } from 'naive-ui'
-import { ref } from 'vue'
+'Breakpoints';
+
+import PageBlock from '@c/Layout/PageBlock.vue';
+import { NButton, NScrollbar, NTabPane, NTabs } from 'naive-ui';
+import { ref } from 'vue';
 
 const breakpoints = ref([
-  { id: '1', width: 'w-[767px]', title: 'sm: 375px - 767px' },
-  { id: '1', width: 'w-[1023px]', title: 'md: 768px - 1023px' },
-  { id: '1', width: 'w-[1339px]', title: 'lg: 1024px - 1339px' },
-  { id: '1', width: 'w-[1919px]', title: 'xl: 1440px - 1919px' },
-  { id: '1', width: 'w-[1920px]', title: '2xl: 1920px & beyond' },
-])
+  {
+    id: '1',
+    width: 'w-[767px]',
+    title: 'sm: 375px - 767px',
+  },
+  {
+    id: '1',
+    width: 'w-[1023px]',
+    title: 'md: 768px - 1023px',
+  },
+  {
+    id: '1',
+    width: 'w-[1339px]',
+    title: 'lg: 1024px - 1339px',
+  },
+  {
+    id: '1',
+    width: 'w-[1919px]',
+    title: 'xl: 1440px - 1919px',
+  },
+  {
+    id: '1',
+    width: 'w-[1920px]',
+    title: '2xl: 1920px & beyond',
+  },
+]);
 </script>
 
 <template>

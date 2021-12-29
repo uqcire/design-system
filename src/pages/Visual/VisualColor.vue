@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-'Color'
+'Color';
 
-import PageBlock from '@c/Layout/PageBlock.vue'
-import { NButton, NCard, NTabPane, NTabs } from 'naive-ui'
-import { ref } from 'vue'
+import PageBlock from '@c/Layout/PageBlock.vue';
+import { NButton, NCard, NTabPane, NTabs } from 'naive-ui';
+import { ref } from 'vue';
 
 const brand = ref([
   {
@@ -86,10 +86,15 @@ const brand = ref([
         state: 'Pass',
         text: 'text-white',
       },
-      { id: '1-2', val: 'Black (4.81 AA)', state: 'Pass', text: 'text-black' },
+      {
+        id: '1-2',
+        val: 'Black (4.81 AA)',
+        state: 'Pass',
+        text: 'text-black',
+      },
     ],
   },
-])
+]);
 
 const status = ref([
   {
@@ -100,7 +105,12 @@ const status = ref([
     hex: '#207f4c',
     css: 'fgl-success',
     ctrs: [
-      { id: '1-1', val: 'White (5.00 AA)', state: 'Pass', text: 'text-white' },
+      {
+        id: '1-1',
+        val: 'White (5.00 AA)',
+        state: 'Pass',
+        text: 'text-white',
+      },
       {
         id: '1-2',
         val: 'Black (4.20 Large)',
@@ -255,10 +265,15 @@ const status = ref([
         state: 'Pass',
         text: 'text-white',
       },
-      { id: '8-2', val: 'Black (6.99 AA)', state: 'Pass', text: 'text-black' },
+      {
+        id: '8-2',
+        val: 'Black (6.99 AA)',
+        state: 'Pass',
+        text: 'text-black',
+      },
     ],
   },
-])
+]);
 </script>
 
 <template>

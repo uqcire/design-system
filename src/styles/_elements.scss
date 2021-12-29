@@ -72,3 +72,16 @@ figure {
 figcaption {
   @apply text-sm opacity-80;
 }
+
+.fgl-text-link {
+  @apply p-0 border-0 underline text-fgl-primary underline-offset-1 decoration-1 transition-all duration-200 ease-in-out;
+
+  &:hover,
+  :focus {
+    @apply decoration-2 underline-offset-2;
+  }
+
+  &:focus {
+    @apply no-underline;
+  }
+}

@@ -1,16 +1,32 @@
 <script lang="ts" setup>
-'Typography'
+'Typography';
 
-import PageBlock from '@c/Layout/PageBlock.vue'
-import { NButton, NDivider, NTable, NTag } from 'naive-ui'
-import { ref } from 'vue'
+import PageBlock from '@c/Layout/PageBlock.vue';
+import { NButton, NDivider, NTable, NTag } from 'naive-ui';
+import { ref } from 'vue';
 
 const bodyScales = ref([
-  { id: 1, title: 'Large', class: 'text-xl' },
-  { id: 2, title: 'Base', class: 'text-base' },
-  { id: 3, title: 'Small', class: 'text-sm' },
-  { id: 4, title: 'Caption', class: 'text-caption' },
-])
+  {
+    id: 1,
+    title: 'Large',
+    class: 'text-xl',
+  },
+  {
+    id: 2,
+    title: 'Base',
+    class: 'text-base',
+  },
+  {
+    id: 3,
+    title: 'Small',
+    class: 'text-sm',
+  },
+  {
+    id: 4,
+    title: 'Caption',
+    class: 'text-caption',
+  },
+]);
 
 const typoTokens = ref([
   {
@@ -133,7 +149,7 @@ const typoTokens = ref([
     valueD: '',
     valueE: '',
   },
-])
+]);
 </script>
 
 <template>
@@ -215,7 +231,8 @@ const typoTokens = ref([
         <h3>Body Scale</h3>
         <n-divider />
         <p v-for="val in bodyScales" :key="val.id" :class="val.class">
-          {{ val.title }}: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda?
+          {{ val.title }}: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo,
+          assumenda?
         </p>
       </div>
       <n-divider />
@@ -277,9 +294,10 @@ const typoTokens = ref([
           <h2>Headline - Lorem ipsum dolor sit.</h2>
           <h3 class="sub">Subheadline - Lorem ipsum dolor sit.</h3>
           <p class="base">
-            This is regular text, and some lorem ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in
-            nihil perferendis sequi modi atque soluta odio possimus, aliquid, beatae dolore ipsam amet officia nobis
-            molestiae laborum porro aspernatur. Repellendus.
+            This is regular text, and some lorem ipsum. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Sunt in nihil perferendis sequi modi atque soluta odio possimus,
+            aliquid, beatae dolore ipsam amet officia nobis molestiae laborum porro aspernatur.
+            Repellendus.
           </p>
         </article>
         <n-divider />
@@ -315,7 +333,9 @@ const typoTokens = ref([
           TYPOGRAPHY TOKENS
         </n-tag>
         <h1>Typography Tokens</h1>
-        <h3 class="sub">Design tokens for FGL's typography system, available as CSS custom properties.</h3>
+        <h3 class="sub">
+          Design tokens for FGL's typography system, available as CSS custom properties.
+        </h3>
         <n-table :single-line="false">
           <!-- headline scacles -->
           <thead>
