@@ -7,9 +7,10 @@
 </template>
 
 <script lang="ts" setup>
-'App'
+'App';
 
-import { GlobalThemeOverrides, NConfigProvider } from 'naive-ui'
-import theme from './utils/naive-ui-theme-overrides.json'
-const themeOverrides: GlobalThemeOverrides = theme
+import { GlobalThemeOverrides, NConfigProvider } from 'naive-ui';
+import theme from './utils/naive-ui-theme-overrides.json';
+
+const themeOverrides: GlobalThemeOverrides = theme;
 </script>

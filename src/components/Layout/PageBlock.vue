@@ -7,5 +7,5 @@
 </template>
 
 <script lang="ts" setup>
-'PageBlock'
+'PageBlock';
 </script>
