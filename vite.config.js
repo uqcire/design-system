@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-import { fileURLToPath, URL } from 'node:url'
+import path from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -41,7 +41,7 @@ export default defineConfig((mode) => {
     base: VITE_PUBLIC_PATH || '/',
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@': path.resolve(__dirname, 'src'), // Ensure 'src' is the correct directory
       },
       // 导入文件时省略的扩展名列表
       extensions: [
