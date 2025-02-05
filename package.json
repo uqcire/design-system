@@ -26,7 +26,6 @@
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@iconify/json": "^2.2.302",
-    "@types/node": "^22.13.0",
     "@unocss/eslint-config": "^65.4.3",
     "@unocss/preset-uno": "^65.4.3",
     "@vitejs/plugin-vue": "^5.2.1",
